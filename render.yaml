@@ -2,7 +2,7 @@ services:
 - type: web
   name: mastodon-web
   env: docker
-  plan: starter
+  plan: free
   dockerCommand: ./db-migration-and-web-start.sh
   envVars:
   - fromGroup: mastodon-env
@@ -137,7 +137,7 @@ services:
 - type: redis
   name: mastodon-redis
   ipAllowList: []
-  plan: starter
+  plan: free
 databases:
 - name: mastodon-db
   databaseName: private
